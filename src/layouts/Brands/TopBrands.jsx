@@ -16,7 +16,7 @@ const TopBrands = () => {
             <h2 className='text-lg text-center font-bold'>Top Brands</h2>
 
             <div className='mt-4'>
-                <Marquee>
+                <Marquee pauseOnHover='true'>
                   
                    
                    {
