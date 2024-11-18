@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -18,6 +20,12 @@ const Footer = () => {
                     </svg>
                     <div>Copyright © {new Date().getFullYear()} - <a href="https://indrojitmondal.netlify.app/">Indrojit Mondal.</a> All right reserved</div>
                 </aside>
+                 
+                 <Link to={'/'} className='flex justify-center'>
+                    
+                    <img className='w-[80px] h-[80px]' src={logo} alt="" />
+                 </Link>
+
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
                     <a>
                         <svg
