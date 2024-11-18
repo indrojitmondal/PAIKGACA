@@ -63,7 +63,8 @@ const Navbar = () => {
                                   <IoSearch className=' text-primary' />
                                  </button>
                                 
-                            </div> 
+                      </div>  
+
                      <div className=' '>
                        <ul className="menu menu-horizontal px-1">
                         {links}
@@ -108,6 +109,16 @@ const Navbar = () => {
 
             <div className='text-white  lg:hidden   bg-[#036544]'>
                 
+               
+               <div className=" form-control pt-3 relative  mx-auto w-[300px]">
+                                 <input type="text" placeholder="Search Paikgaca" className="input text-black   input-bordered " />
+                                 
+                                 <button className='absolute right-3 top-8'>
+                                  <IoSearch className=' text-primary' />
+                                 </button>
+                                
+                      </div> 
+               
                <div className=' '>
                    {links}
                </div>
