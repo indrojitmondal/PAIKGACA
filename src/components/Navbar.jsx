@@ -127,18 +127,23 @@ const Navbar = () => {
             <div className='text-white  lg:hidden   bg-[#036544]'>
                 
                
-               {/* <div className=" form-control pt-3 relative  mx-auto w-[300px]">
+               <div className=' '>
+                   {links}
+               </div>
+
+                {
+                    path =='/brands' &&
+                    <div className=" form-control pb-3 relative  mx-auto w-[300px]">
                                  <input type="text" placeholder="Search Brand" className="input text-black   input-bordered " />
                                  
                                  <button className='absolute right-3 top-8'>
                                   <IoSearch className=' text-primary' />
                                  </button>
                                 
-                      </div>  */}
+                      </div> 
+                }
                
-               <div className=' '>
-                   {links}
-               </div>
+              
                
                
              

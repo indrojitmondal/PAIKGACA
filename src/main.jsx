@@ -16,6 +16,10 @@ import Register from './components/Register';
 import Sliders from './components/Sliders';
 import MainLayout from './components/laoutComponent/MainLayout';
 import TopBrands from './layouts/Brands/TopBrands';
+import Brands from './pages/Brands';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/brands',
-        element : <PrivateRoute> <TopBrands></TopBrands>  </PrivateRoute> 
+        element :  <Brands></Brands> 
       },
 
     ]
@@ -51,8 +55,16 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <HelmetProvider>
+
     <AuthProvider>
         <RouterProvider router={router} />
     </AuthProvider>
+
+    </HelmetProvider>
+  
+
+  
+    
   </StrictMode>,
 )
