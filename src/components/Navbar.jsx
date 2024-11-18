@@ -26,7 +26,7 @@ const Navbar = () => {
                 ""
          }
 
-        <NavLink className='flex items-center gap-1' ><TbArrowRoundaboutRight />About Us</NavLink>
+        <NavLink className='flex items-center gap-1' ><TbArrowRoundaboutRight />About Dev</NavLink>
 
     </div>
     return (
