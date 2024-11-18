@@ -13,6 +13,7 @@ import Root from './components/Root';
 import MyProfile from './components/MyProfile';
 import PrivateRoute from './routes/PrivateRoute';
 import Register from './components/Register';
+import Sliders from './components/Sliders';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/my-profile',
         element : <PrivateRoute> <MyProfile></MyProfile>  </PrivateRoute> 
+      },
+      {
+        path: '',
+        element : <Sliders></Sliders>
       }
     ]
 

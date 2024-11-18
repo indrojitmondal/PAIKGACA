@@ -29,7 +29,7 @@ const Profile = () => {
            
 
 
-                <button onClick={handleLogOut} className='btn rounded-2xl'>Log Out</button>
+                <button onClick={handleLogOut} className='px-4 py-1 text-black bg-white text-sm rounded-2xl'>Log Out</button>
             </div>
             {/* <h2 className='block md:hidden'>{user.email}</h2> */}
             <div className='block md:hidden'>
