@@ -1,12 +1,12 @@
 
 import React, { useContext, useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import { updateProfile } from 'firebase/auth';
 import { auth } from '../firebase.init';
-
+import logo from '../assets/logo.png'
 const Register = () => {
 
     const [showPassword, setShowPassword] = useState(false);
@@ -15,9 +15,10 @@ const Register = () => {
     const [successMessage, setSuccessMessage] = useState('');
 
 
-    
-    const { createUser, sendVerification, imageUrl, setImageUrl } = useContext(AuthContext);
 
+    
+    const { createUser, setUser, sendVerification, imageUrl, setImageUrl } = useContext(AuthContext);
+    
    
    
     const handlePasswordShow = () => {
@@ -26,7 +27,7 @@ const Register = () => {
 
     
     const navigate = useNavigate();
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d@$!%*?&]{6,}$/;
 
     const handleRegister = e => {
         e.preventDefault();
@@ -60,20 +61,15 @@ const Register = () => {
             return;
         }
         if (!regex.test(password)) {
-            setErrorMessage('Password should be at least one upper case letter, one lower case letter, one digit, one special character and total length should be at least 8');
+            setErrorMessage('Password should be at least one upper case letter, one lower case letter and total length should be at least 6');
             return;
         }
         createUser(email, password)
             .then(result => {
               
                 e.target.reset();
-                // navigate('/');
-                // send verification email address 
-                sendVerification()
-                    .then(() => {
-                        // console.log('Verification email send');
-                        // setVerificationMessage('Verification email send');
-                    })
+                
+               
 
                 const profile= {
                     displayName: name,
@@ -86,6 +82,11 @@ const Register = () => {
                 updateProfile(auth.currentUser, profile)
                 .then( ()=>{
 
+                    // console.log('Okay?', result.user);
+
+                    setUser(result.user);
+                    navigate('/');
+
                 })
                 .catch( error =>{
                     setErrorMessage(error.errorMessage);
@@ -97,7 +98,7 @@ const Register = () => {
 
                 setSuccess(true);
                 setErrorMessage('');
-                setSuccessMessage('Successfully Registered and Send email verification. Please verify!');
+               // setSuccessMessage('Successfully Registered and Send email verification. Please verify!');
             })
             .catch(error => {
                 // console.log('ERROR:', error.message);
@@ -108,14 +109,19 @@ const Register = () => {
 
 
     }
+   
     // useEffect( ()=>{
     //     setImageUrl('');
     // },[handleRegister]);
     return (
-        <div className="hero bg-base-200 ">
+        <div className="hero bg-[#036544] ">
             <div className="hero-content flex-col ">
+
+            <Link to={'/'}  className='mx-auto'>
+                      <img   className='w-20 h-20 md:w-40 md:h-36' src={logo} alt="logo" />
+                </Link>
                 <div className="text-center lg:text-left">
-                    <h1 className="text-3xl font-bold">Register now!</h1>
+                    <h1 className="text-2xl text-white font-bold">Register Now!</h1>
 
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">

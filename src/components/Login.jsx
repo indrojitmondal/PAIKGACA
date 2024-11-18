@@ -122,9 +122,9 @@ const Login = () => {
 
             <div className="hero-content flex-col ">
 
-                <div className='mx-auto'>
-                      <img className='w-20 h-20 md:w-40 md:h-36' src={logo} alt="logo" />
-                </div>
+                <Link to={'/'}  className='mx-auto'>
+                      <img   className='w-20 h-20 md:w-40 md:h-36' src={logo} alt="logo" />
+                </Link>
                 <div className="text-center lg:text-left">
                     <h1 className="text-2xl text-white font-bold">Sign In</h1>
 
