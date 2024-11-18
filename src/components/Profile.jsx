@@ -1,8 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import { Navigate } from 'react-router-dom';
 
 const Profile = () => {
-    const { user } = useContext(AuthContext);
+    const { user, setUser } = useContext(AuthContext);
+    const handleLogOut= ()=>{
+         setUser('');
+         <Navigate to={'/'}></Navigate>
+    }
     return (
         <div>
             <div className='flex items-center justify-between md:gap-5'>
@@ -21,7 +26,7 @@ const Profile = () => {
            
 
 
-                <button className='btn'>Log Out</button>
+                <button onClick={handleLogOut} className='btn'>Log Out</button>
             </div>
             <h2 className='block md:hidden'>{user.email}</h2>
         </div>

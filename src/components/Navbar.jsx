@@ -10,6 +10,7 @@ import { AuthContext } from '../providers/AuthProvider';
 import Profile from './Profile';
 import PrivateRoute from '../routes/PrivateRoute';
 import { CgProfile } from "react-icons/cg";
+import { IoSearch } from "react-icons/io5";
 const Navbar = () => {
 
     const { user, setUser } = useContext(AuthContext);
@@ -29,8 +30,8 @@ const Navbar = () => {
 
     </div>
     return (
-        <div className='md:w-11/12 mx-auto'>
-            <div className="navbar   bg-base-100">
+        <div className=''>
+            <div className="navbar text-white    bg-[#036544]">
                 <div className=" navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,22 +50,38 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content  text-white    bg-[#036544]   z-[1] mt-[47px] w-52 p-2 shadow">
 
                             {links}
 
                         </ul>
                     </div>
                     {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
-                    <img className=" w-32 h-32 md:w-40 md:h-40 " src={logo} alt="logo" />
+                    <img className=" w-32 h-20 md:w-40 md:h-40 " src={logo} alt="logo" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
 
-                  
-                    <ul className="menu menu-horizontal px-1">
+                     <div>
+                       <ul className="menu menu-horizontal px-1">
                         {links}
-                    </ul>
+                       </ul>
+                     </div>
+{/* 
+                     <div className="form-control relative  mx-auto w-[300px]">
+                                <input type="text" placeholder="Search Paikgacha" className="input text-black  input-bordered " />
+                                 
+                                 <button className='absolute right-3 top-4'>
+                                 <IoSearch className=' text-primary' />
+                                 </button>
+                                
+                            </div> */}
+                  
+
+                    
+
+                   
                 </div>
+
                 {
                     user ?
 
@@ -83,7 +100,7 @@ const Navbar = () => {
 
 
                             <Link to={'/login'} className='flex items-center gap-1'> <IoLogIn /> Login</Link>
-                            <Link className='flex items-center gap-1'> <FaRegRegistered /> Register</Link>
+                            <Link to={'/register'} className='flex items-center gap-1'> <FaRegRegistered /> Register</Link>
 
 
                         </div>

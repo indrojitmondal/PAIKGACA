@@ -118,7 +118,7 @@ const Login = () => {
 
     }
     return (
-        <div className="hero bg-base-200 ">
+        <div className="hero bg-[#036544] ">
 
             <div className="hero-content flex-col ">
 
@@ -126,7 +126,7 @@ const Login = () => {
                       <img className='w-20 h-20 md:w-40 md:h-36' src={logo} alt="logo" />
                 </div>
                 <div className="text-center lg:text-left">
-                    <h1 className="text-2xl font-bold">Sign In</h1>
+                    <h1 className="text-2xl text-white font-bold">Sign In</h1>
 
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -154,14 +154,17 @@ const Login = () => {
                     <p className='ml-4 mb-4 mr-4'>
                         New to this website ? Please <Link to={'/register'}>Register</Link>
                     </p>
-                    <p>
+                    <div>
                         <h2 className='font-bold ml-4'>Continue with</h2>
-            
-                        <button onClick={handleGoogleSignIn}
-                            className='btn btn-ghost'>Google</button>
+                         
+                         <div className='flex justify-center'>
+                         <button onClick={handleGoogleSignIn}
+                            className='btn  btn-ghost  '>Google</button>
 
+                         </div>
+                        
                           
-                    </p>
+                    </div>
 
                     {
                         loginError && <p className='text-red-600 ml-4 mb-4 mr-4 '>
