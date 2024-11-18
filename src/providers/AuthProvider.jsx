@@ -48,7 +48,7 @@ const AuthProvider = ({children}) => {
         //    console.log('ProviderId:', currentUser.providerData[0].providerId)
            let providerId= currentUser?.providerData[0].providerId;
             
-           console.log('Hello...', currentUser);
+        //    console.log('Hello...', currentUser);
             setUser(currentUser);
             setLoading(false);
 

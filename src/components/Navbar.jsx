@@ -56,7 +56,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden  lg:flex lg:flex-col">
 
                     
-                      <div className="form-control relative mt-4  mx-auto w-[300px]">
+                      <div className=" form-control relative mt-4  mx-auto w-[300px]">
                                  <input type="text" placeholder="Search Paikgaca" className="input text-black   input-bordered " />
                                  
                                  <button className='absolute right-3 top-4'>
@@ -64,7 +64,7 @@ const Navbar = () => {
                                  </button>
                                 
                             </div> 
-                     <div className=''>
+                     <div className=' '>
                        <ul className="menu menu-horizontal px-1">
                         {links}
                        </ul>
@@ -91,7 +91,7 @@ const Navbar = () => {
 
 
                         </div> :
-                        <div className="navbar-end text-lg flex gap-5 items-center">
+                        <div className="navbar-end mr-4 text-lg flex gap-5 items-center">
 
 
 

@@ -14,6 +14,7 @@ import MyProfile from './components/MyProfile';
 import PrivateRoute from './routes/PrivateRoute';
 import Register from './components/Register';
 import Sliders from './components/Sliders';
+import MainLayout from './components/laoutComponent/MainLayout';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: '',
-        element : <Sliders></Sliders>
+        element : <MainLayout></MainLayout>
       }
     ]
 
