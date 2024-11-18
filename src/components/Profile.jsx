@@ -20,15 +20,22 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <h2 className='hidden md:block'>{user.email}</h2>
+                <div className='hidden md:block'>
+                    <h4 className='text-center text-sm'>Hello, {user.displayName}</h4>
+                    <h2 className='text-base'>{user.email}</h2>
+                </div>
 
 
            
 
 
-                <button onClick={handleLogOut} className='btn'>Log Out</button>
+                <button onClick={handleLogOut} className='btn rounded-2xl'>Log Out</button>
             </div>
-            <h2 className='block md:hidden'>{user.email}</h2>
+            {/* <h2 className='block md:hidden'>{user.email}</h2> */}
+            <div className='block md:hidden'>
+                    <h4 className='text-center text-sm'>Hello, {user.displayName}</h4>
+                    <h2 className='text-base'>{user.email}</h2>
+                </div>
         </div>
     );
 };
