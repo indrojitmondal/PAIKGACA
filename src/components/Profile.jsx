@@ -32,7 +32,7 @@ const Profile = () => {
                 <button onClick={handleLogOut} className='px-4 py-1 text-black bg-white text-sm rounded-2xl'>Log Out</button>
             </div>
             {/* <h2 className='block md:hidden'>{user.email}</h2> */}
-            <div className='block md:hidden'>
+            <div className='block md:hidden space-y-1 mt-2 md:space-y-3'>
                     <h4 className='text-center text-sm'>Hello, {user.displayName}</h4>
                     <h2 className='text-base'>{user.email}</h2>
                 </div>

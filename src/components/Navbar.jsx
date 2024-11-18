@@ -53,22 +53,24 @@ const Navbar = () => {
                     {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
                     <img className=" w-32 h-24 md:w-40 md:h-40 " src={logo} alt="logo" />
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden  lg:flex lg:flex-col">
 
-                     <div>
+                    
+                      <div className="form-control relative mt-4  mx-auto w-[300px]">
+                                 <input type="text" placeholder="Search Paikgaca" className="input text-black   input-bordered " />
+                                 
+                                 <button className='absolute right-3 top-4'>
+                                  <IoSearch className=' text-primary' />
+                                 </button>
+                                
+                            </div> 
+                     <div className=''>
                        <ul className="menu menu-horizontal px-1">
                         {links}
                        </ul>
                      </div>
-{/* 
-                     <div className="form-control relative  mx-auto w-[300px]">
-                                <input type="text" placeholder="Search Paikgacha" className="input text-black  input-bordered " />
-                                 
-                                 <button className='absolute right-3 top-4'>
-                                 <IoSearch className=' text-primary' />
-                                 </button>
-                                
-                            </div> */}
+ 
+                      
                   
 
                     
