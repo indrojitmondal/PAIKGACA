@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
+import { Link } from 'react-router-dom';
 
 const TopBrands = () => {
 
@@ -16,12 +17,19 @@ const TopBrands = () => {
             <h2 className='text-lg text-center font-bold'>Top Brands</h2>
 
             <div className='mt-4'>
-                <Marquee pauseOnHover='true'>
+                <Marquee pauseOnHover='true' speed={100}>
                   
                    
+                  
                    {
-                     coupons.map( coupon => <img className='w-[200px] h-[200px]' key={coupon._id} src={coupon.brand_logo}></img> )
+                     coupons.filter( coupon => coupon.rating > 4.5)
+                     .map( coupon => <Link key={coupon._id}> <img className='w-[200px] h-[200px]' key={coupon._id} src={coupon.brand_logo}></img> </Link> )
+                   
+                     
                    }
+
+                
+
                 
                 </Marquee>
             </div>

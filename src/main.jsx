@@ -15,20 +15,27 @@ import PrivateRoute from './routes/PrivateRoute';
 import Register from './components/Register';
 import Sliders from './components/Sliders';
 import MainLayout from './components/laoutComponent/MainLayout';
+import TopBrands from './layouts/Brands/TopBrands';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
     children: [
      
+     
+      {
+        path: '',
+        element : <MainLayout></MainLayout>
+      },
       {
         path: '/my-profile',
         element : <PrivateRoute> <MyProfile></MyProfile>  </PrivateRoute> 
       },
       {
-        path: '',
-        element : <MainLayout></MainLayout>
-      }
+        path: '/brands',
+        element : <PrivateRoute> <TopBrands></TopBrands>  </PrivateRoute> 
+      },
+
     ]
 
   },

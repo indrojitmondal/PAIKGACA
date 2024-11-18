@@ -5,7 +5,7 @@ import { TbBrandAirtable } from "react-icons/tb";
 import { IoLogIn } from "react-icons/io5";
 import { FaRegRegistered } from "react-icons/fa";
 import { TbArrowRoundaboutRight } from "react-icons/tb";
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import Profile from './Profile';
 import PrivateRoute from '../routes/PrivateRoute';
@@ -14,15 +14,23 @@ import { IoSearch } from "react-icons/io5";
 const Navbar = () => {
 
     const { user, setUser } = useContext(AuthContext);
+    const location = useLocation();
+    const path= location.pathname;
+    // console.log(path);
 
     const links = <div className='flex md:text-lg justify-center py-5 md:py-0 gap-5 md:gap-10'>
         <NavLink className='flex items-center gap-1' ><MdHome /> Home</NavLink>
-        <NavLink className='flex items-center gap-1'  ><TbBrandAirtable /> Brand</NavLink>
+        <NavLink to={'/brands'} className='flex items-center gap-1'  ><TbBrandAirtable /> Brand</NavLink>
          
          {
             user?
-                <NavLink to={'/my-profile'} className='flex items-center gap-1'> <CgProfile />  My Profile
-                </NavLink> : 
+                <>
+                 <NavLink to={'/my-profile'} className='flex items-center gap-1'> <CgProfile />  My Profile
+                </NavLink> 
+
+                </>
+               
+                : 
                 ""
          }
 
@@ -56,20 +64,29 @@ const Navbar = () => {
                 <div className="navbar-center hidden  lg:flex lg:flex-col">
 
                     
+                    
+                    
+                    
+                      { 
+                       path =='/brands' &&
+                      
                       <div className=" form-control relative mt-4  mx-auto w-[300px]">
-                                 <input type="text" placeholder="Search Paikgaca" className="input text-black   input-bordered " />
+                                 <input type="text" placeholder="Search Brand" className="input text-black   input-bordered " />
                                  
                                  <button className='absolute right-3 top-4'>
                                   <IoSearch className=' text-primary' />
                                  </button>
                                 
                       </div>  
+                      }
 
-                     <div className=' '>
+                    <div className=' '>
                        <ul className="menu menu-horizontal px-1">
                         {links}
                        </ul>
                      </div>
+
+                     
  
                       
                   
@@ -110,14 +127,14 @@ const Navbar = () => {
             <div className='text-white  lg:hidden   bg-[#036544]'>
                 
                
-               <div className=" form-control pt-3 relative  mx-auto w-[300px]">
-                                 <input type="text" placeholder="Search Paikgaca" className="input text-black   input-bordered " />
+               {/* <div className=" form-control pt-3 relative  mx-auto w-[300px]">
+                                 <input type="text" placeholder="Search Brand" className="input text-black   input-bordered " />
                                  
                                  <button className='absolute right-3 top-8'>
                                   <IoSearch className=' text-primary' />
                                  </button>
                                 
-                      </div> 
+                      </div>  */}
                
                <div className=' '>
                    {links}
