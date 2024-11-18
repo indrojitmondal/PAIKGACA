@@ -5,7 +5,7 @@ const Card = ({ brand }) => {
     console.log('Hello', brand);
     const { brand_logo, brand_name, rating, description } = brand;
     return (
-        <div className='lg:w-8/12 flex px-4 lg:px-0 gap-4 lg:justify-between  items-center mx-auto py-8'>
+        <div className='lg:w-8/12 grid grid-cols-2  px-4 lg:px-0 gap-4 lg:justify-between  items-center mx-auto py-8'>
             <div className="left">
                 <img className='w-40 h-40 lg:w-96 lg:h-96' src={brand_logo} alt="" />
                 <h2 className='text-xl'>{brand_name}</h2>
