@@ -128,20 +128,20 @@ const Register = () => {
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text font-bold">Name</span>
                             </label>
                             <input type="text" name='name' placeholder="name" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text font-bold">Email</span>
                             </label>
                             <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                        
                         </div>
                         <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text font-bold">Password</span>
                             </label>
                             <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered" required />
                             <button type='button' onClick={handlePasswordShow} className='absolute right-4 top-12'> {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}  </button>
@@ -150,7 +150,7 @@ const Register = () => {
 
                         <div className="form-control ">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="label-text font-bold">Photo URL</span>
                             </label>
 
                             <input type="text" name='photo' placeholder="photoURL" className="input input-bordered" required />

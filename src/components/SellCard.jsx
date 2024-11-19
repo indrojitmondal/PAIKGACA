@@ -2,7 +2,7 @@ import React from 'react';
 
 const SellCard = ({brand}) => {
     const { brand_logo, brand_name,coupons,isSaleOn,category}= brand;
-    console.log("hello..coupons",coupons);
+    // console.log("hello..coupons",coupons);
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-xl">
