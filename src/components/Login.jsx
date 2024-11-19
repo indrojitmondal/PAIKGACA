@@ -1,6 +1,6 @@
 
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
@@ -14,6 +14,8 @@ import { GoogleLoginButton } from "react-social-login-buttons";
 
 const Login = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const path = location.pathname;
    
     const { signInUser, signInWithGoogle } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
@@ -48,7 +50,7 @@ const Login = () => {
 
                     // console.log(user);
 
-                    navigate('/');
+                    navigate(path);
                     e.target.reset();
                     setLoginError('');
                     setLoading(false);

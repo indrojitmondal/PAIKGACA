@@ -49,13 +49,13 @@ const Card = ({ brand }) => {
                 
                 </div>
 
-                <div className=" hidden py-4 lg:block text-green-600 ">
+                <div className=" hidden py-4 pr-8 text-xl lg:block text-green-600 ">
                     
                     {
                         isSaleOn &&
 
                         //  <button className='border border-green-300 bg-green-200 text-green-600 font-bold rounded-[32px] px-3 py-1'>  'sale is on'   </button>
-                        <Wave  text="sale is on"  />
+                        <Wave  text="Sale is on"  />
                     }
                 </div>
 
