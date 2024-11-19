@@ -1,8 +1,8 @@
 import React from 'react';
 import slide1 from '../assets/hero-carousel/1.jpg';
-import slide2 from '../assets/hero-carousel/2.jpg';
-import slide3 from '../assets/hero-carousel/3.jpg';
-import slide4 from '../assets/hero-carousel/4.jpg';
+import slide2 from '../assets/hero-carousel/cs1.webp';
+import slide3 from '../assets/hero-carousel/cs2.webp';
+import slide4 from '../assets/hero-carousel/cs3.webp';
 
 const Sliders = () => {
     return (
