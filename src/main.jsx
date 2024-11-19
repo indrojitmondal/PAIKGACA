@@ -20,6 +20,7 @@ import Brands from './pages/Brands';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ErrorPage from './pages/ErrorPage';
 import BrandDetails from './layouts/Brands/BrandDetails';
+import UpdateProfile from './components/UpdateProfile';
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         path: '/my-profile',
         element : <PrivateRoute> <MyProfile></MyProfile>  </PrivateRoute> 
       },
+      {
+        path: '/update-profile',
+        element : <PrivateRoute> <UpdateProfile></UpdateProfile>  </PrivateRoute> 
+      },
+
       {
         path: '/brands',
         element :  <Brands></Brands> 

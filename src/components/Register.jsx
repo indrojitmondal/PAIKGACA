@@ -37,7 +37,7 @@ const Register = () => {
         const password = e.target.password.value;
 
         const photo = e.target.photo.value;
-        const terms = e.target.terms.checked;
+        
 
         // console.log(photo);
 
@@ -57,9 +57,7 @@ const Register = () => {
         setSuccessMessage('');
         setSuccess(false);
         // setVerificationMessage('');
-        if (!terms) {
-            return;
-        }
+       
         if (!regex.test(password)) {
             setErrorMessage('Password should be at least one upper case letter, one lower case letter and total length should be at least 6');
             return;
@@ -124,7 +122,7 @@ const Register = () => {
                     <h1 className="text-2xl text-white font-bold">Register Now!</h1>
 
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100  w-full md:w-[600px] shrink-0 shadow-2xl">
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -157,13 +155,13 @@ const Register = () => {
                        
 
                         </div>
-                        <div className="form-control">
+                        {/* <div className="form-control">
                             <label className="label justify-start cursor-pointer">
                                 <input type="checkbox" name='terms' className="checkbox" />
                                 <span className="label-text ml-2">Accept our terms and condition</span>
 
                             </label>
-                        </div>
+                        </div> */}
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
                         </div>
