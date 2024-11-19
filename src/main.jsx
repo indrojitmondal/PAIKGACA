@@ -18,6 +18,7 @@ import MainLayout from './components/laoutComponent/MainLayout';
 import TopBrands from './layouts/Brands/TopBrands';
 import Brands from './pages/Brands';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import ErrorPage from './pages/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
         path: '',
         element : <MainLayout></MainLayout>
       },
+     
       {
         path: '/my-profile',
         element : <PrivateRoute> <MyProfile></MyProfile>  </PrivateRoute> 
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
   {
     path:'/register',
     element: <Register></Register>
+  },
+  {
+    path: '*',
+    element : <ErrorPage></ErrorPage>
   },
   
 ]);

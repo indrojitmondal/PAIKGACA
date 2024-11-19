@@ -43,7 +43,7 @@ const Card = ({ brand }) => {
                         <Wave  text="sale is on"  />
                     }
                     </div>
-                    <Link  className='btn mt-3'>View Details</Link>
+                    <Link  className='btn mt-3'>View Coupons</Link>
 
                     
                 
