@@ -164,7 +164,7 @@ const Login = () => {
                             className='btn  btn-ghost text-green-500  '>Google</button>
 
                          </div> */}
-                         <GoogleLoginButton onClick={handleGoogleSignIn} />
+                         <GoogleLoginButton onClick={handleGoogleSignIn} className='text-sm' />
                         
                           
                     </div>

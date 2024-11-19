@@ -23,7 +23,7 @@ const TopBrands = () => {
                   
                    {
                      coupons.filter( coupon => coupon.rating > 4.5)
-                     .map( coupon => <Link key={coupon._id}> <img className='w-[200px] h-[200px]' key={coupon._id} src={coupon.brand_logo}></img> </Link> )
+                     .map( coupon => <Link to={`/brand/${coupon._id}`} key={coupon._id}> <img className='w-[200px] h-[200px]' key={coupon._id} src={coupon.brand_logo}></img> </Link> )
                    
                      
                    }

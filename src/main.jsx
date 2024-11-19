@@ -19,6 +19,7 @@ import TopBrands from './layouts/Brands/TopBrands';
 import Brands from './pages/Brands';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ErrorPage from './pages/ErrorPage';
+import BrandDetails from './layouts/Brands/BrandDetails';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         path: '/brands',
         element :  <Brands></Brands> 
       },
+      {
+        path: '/brand/:id',
+        element : <PrivateRoute> <BrandDetails></BrandDetails> </PrivateRoute> ,
+      }
 
     ]
 
