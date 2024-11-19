@@ -26,6 +26,7 @@ const Login = () => {
     const { imageUrl, setImageUrl } = useContext(AuthContext);
 
     const { user, setUser } = useContext(AuthContext);
+    const {targetPath}= useContext(AuthContext);
 
     const handlePasswordShow = () => {
         setShowPassword(!showPassword);
@@ -49,8 +50,9 @@ const Login = () => {
                     setUser(result.user);
 
                     // console.log(user);
+                    // console.log('Hello..Target Path', targetPath)
 
-                    navigate(path);
+                    navigate(targetPath);
                     e.target.reset();
                     setLoginError('');
                     setLoading(false);
@@ -72,7 +74,8 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
             //  console.log(result.user.email);
-                 navigate('/');
+                //  navigate('/');
+                 navigate(targetPath);
 
                 setLoginError('');
 

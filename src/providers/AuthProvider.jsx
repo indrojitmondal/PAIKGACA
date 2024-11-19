@@ -14,6 +14,7 @@ const AuthProvider = ({children}) => {
     const [user,setUser]= useState(null);
     const [loading, setLoading]= useState(true);
     const [imageUrl, setImageUrl] = useState('');
+    const [targetPath, setTargetPath]= useState('/');
 
    
 
@@ -82,6 +83,7 @@ const AuthProvider = ({children}) => {
         signOutUser,
         sendVerification,
         imageUrl, setImageUrl,
+        targetPath, setTargetPath,
         
     }
     return (

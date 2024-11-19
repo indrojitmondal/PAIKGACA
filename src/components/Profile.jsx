@@ -3,9 +3,11 @@ import { AuthContext } from '../providers/AuthProvider';
 import { Navigate } from 'react-router-dom';
 
 const Profile = () => {
-    const { user, setUser } = useContext(AuthContext);
+    const { user, setUser,targetPath, setTargetPath } = useContext(AuthContext);
+    
     const handleLogOut= ()=>{
          setUser('');
+         setTargetPath('/');
          <Navigate to={'/'}></Navigate>
     }
     return (
