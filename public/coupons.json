@@ -115,7 +115,7 @@
         "coupon_type": "Flat Discount"
       }
     ],
-    "shop_link": "https://www.foodiesmart.com",
+    "shop_link": "https://foodiesmart.oddle.me/en_MY/",
     "category": "Groceries",
     "isSaleOn": true
   },
@@ -219,7 +219,7 @@
         "coupon_type": "Flat Discount"
       }
     ],
-    "shop_link": "https://www.gizmohub.com",
+    "shop_link": "https://www.verizon.com/solutions-and-services/add-ons/safety/verizon-gizmohub/",
     "category": "Electronics",
     "isSaleOn": true
   },
@@ -245,7 +245,7 @@
         "coupon_type": "Flat Discount"
       }
     ],
-    "shop_link": "https://www.kitchenmaster.com",
+    "shop_link": "https://kitchenmaster-ni.com/",
     "category": "Home & Kitchen",
     "isSaleOn": true
   },
@@ -349,7 +349,7 @@
         "coupon_type": "Buy One Get One"
       }
     ],
-    "shop_link": "https://www.toyworld.com",
+    "shop_link": "https://www.toyworld.co.nz/?srsltid=AfmBOoo5lZBGuAKNaQLl1ieKDZpnHniXYrERT9nt0HB26cqmeXwLUUfU",
     "category": "Toys",
     "isSaleOn": true
   }

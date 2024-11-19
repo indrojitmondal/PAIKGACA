@@ -21,7 +21,14 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ErrorPage from './pages/ErrorPage';
 import BrandDetails from './layouts/Brands/BrandDetails';
 import UpdateProfile from './components/UpdateProfile';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer } from 'react-toastify';
 
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +58,7 @@ const router = createBrowserRouter([
       {
         path: '/brand/:id',
         element : <PrivateRoute> <BrandDetails></BrandDetails> </PrivateRoute> ,
+        loader : ()=> fetch('/coupons.json')
       }
 
     ]
@@ -79,9 +87,11 @@ createRoot(document.getElementById('root')).render(
     </AuthProvider>
 
     </HelmetProvider>
+
+    <ToastContainer /> 
   
 
   
     
-  </StrictMode>,
+  </StrictMode>
 )
