@@ -38,7 +38,7 @@ const UpdateProfile = () => {
             }
            
  return (
-        <div className='min-h-[420px]'>
+        <div className='min-h-[420px] bg-profileBg bg-cover'>
               <h2 className='text-center py-3 text-xl'>Update your Profile</h2>
           
               <div className="card bg-base-100 mb-4  w-full md:w-[600px] lg:mx-auto shrink-0 shadow-2xl">
