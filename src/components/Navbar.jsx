@@ -19,13 +19,13 @@ const Navbar = () => {
     // console.log(path);
 
     const links = <div className='flex md:text-lg justify-center py-5 md:py-0 gap-5 md:gap-10'>
-        <NavLink className='flex items-center gap-1' ><MdHome /> Home</NavLink>
+        <NavLink to={'/'} className='flex items-center gap-1' ><MdHome /> Home</NavLink>
         <NavLink to={'/brands'} className='flex items-center gap-1'  ><TbBrandAirtable /> Brand</NavLink>
          
          {
             user?
                 <>
-                 <NavLink to={'/my-profile'} className='flex items-center gap-1'> <CgProfile />  My Profile
+                 <NavLink to={'/my-profile'} className= 'flex items-center gap-1'    > <CgProfile />  My Profile
                 </NavLink> 
 
                 </>
@@ -34,7 +34,7 @@ const Navbar = () => {
                 ""
          }
 
-        <NavLink className='flex items-center gap-1' ><TbArrowRoundaboutRight />About Dev</NavLink>
+        <NavLink to={'/about'} className='flex items-center gap-1' ><TbArrowRoundaboutRight />About Dev</NavLink>
 
     </div>
     return (
