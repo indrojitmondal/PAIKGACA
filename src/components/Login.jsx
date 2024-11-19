@@ -128,7 +128,7 @@ const Login = () => {
                       <img   className='w-20 h-20 md:w-40 md:h-36' src={logo} alt="logo" />
                 </Link>
                 <div className="text-center lg:text-left">
-                    <h1 className="text-2xl text-white font-bold">LogIn</h1>
+                    <h1 className="text-2xl text-white font-bold">Log In Now</h1>
 
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
