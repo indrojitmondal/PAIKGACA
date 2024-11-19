@@ -14,7 +14,7 @@ const TopBrands = () => {
     },[])
     return (
         <div className='mt-5'>
-            <h2 className='text-lg text-center font-bold'>Top Brands</h2>
+            <h2 className='text-xl text-center font-bold'>Top Brands</h2>
 
             <div className='mt-4'>
                 <Marquee pauseOnHover='true' speed={100}>
