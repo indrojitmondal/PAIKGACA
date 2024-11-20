@@ -17,7 +17,7 @@ const BransOnSell = () => {
     
     return (
         <div className='mt-20 mx-5'>
-            <h2 className='text-xl text-center font-bold'>BRANDS ON SELL</h2>
+            <h2 className='text-xl text-center font-bold animate__animated animate__rubberBand animate__delay-3s	3s'>BRANDS ON SELL</h2>
 
             <div className='my-8'>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>

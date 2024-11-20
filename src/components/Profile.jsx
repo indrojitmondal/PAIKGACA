@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { auth } from '../firebase.init';
 
+
 const Profile = () => {
     const { user, setUser,targetPath, setTargetPath } = useContext(AuthContext);
-    
+    const location = useLocation();
+    const path = location.pathname;
     const handleLogOut= ()=>{
 
         signOut(auth).then(() => {
@@ -38,7 +40,7 @@ const Profile = () => {
                 </div>
 
                 <div className='hidden md:block'>
-                    <h4 className='text-center text-sm'>Hello, {user.displayName}</h4>
+                    <h4 className={`text-center text-sm ${path =='/'&& 'animate__animated animate__heartBeat'}`}>Hello, {user.displayName}</h4>
                     <h2 className='text-base'>{user.email}</h2>
                 </div>
 
@@ -50,7 +52,7 @@ const Profile = () => {
             </div>
             {/* <h2 className='block md:hidden'>{user.email}</h2> */}
             <div className='block md:hidden space-y-1 mt-2 md:space-y-3'>
-                    <h4 className='text-center text-sm'>Hello, {user.displayName}</h4>
+                    <h4 className='text-center text-sm animate__animated animate__bounce'>Hello, {user.displayName}</h4>
                     <h2 className='text-base'>{user.email}</h2>
                 </div>
         </div>

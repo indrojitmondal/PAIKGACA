@@ -6,7 +6,8 @@ const Services = () => {
     return (
         <div className='mt-5'>
 
-            <h2 className='text-xl text-center font-bold'>OUR SERVICES</h2>
+            <h2 className='text-xl text-center font-bold animate__animated animate__flash animate__infinite	infinite'>OUR SERVICES</h2>
+            
 
             <div className='w-8/12 mx-auto'>
                 <p>At our coupon collection application, we aim to make savings effortless and accessible for everyone. Our platform provides a comprehensive collection of exclusive deals, discounts, and promotional offers across various categories, including shopping, dining, entertainment, and more. We ensure that users can easily browse, save, and redeem coupons tailored to their interests and preferences. With real-time updates, seamless usability, and personalized recommendations, we make finding the best deals simple and enjoyable. Join us to save more and spend smarter every day!</p>

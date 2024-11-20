@@ -23,6 +23,7 @@ import BrandDetails from './layouts/Brands/BrandDetails';
 import UpdateProfile from './components/UpdateProfile';
 // import 'react-toastify/dist/ReactToastify.css';
 // import { ToastContainer } from 'react-toastify';
+import 'animate.css';
 
 
 import { toast } from "react-toastify";
