@@ -1,11 +1,11 @@
 
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import { auth } from '../firebase.init';
-import { sendPasswordResetEmail, updateEmail, updatePassword, updateProfile } from 'firebase/auth';
+import { sendPasswordResetEmail, signOut, updateEmail, updatePassword, updateProfile } from 'firebase/auth';
 import logo from '../assets/logo.png'
 
 
@@ -33,88 +33,30 @@ const UpdatePassword = () => {
     const handlePasswordShow = () => {
         setShowPassword(!showPassword);
     }
-    useEffect(() => {
-        setLoginError('');
-
-    }, []);
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])[A-Za-z\d@$!%*?&]{6,}$/;
-
+   
+    
 
     const handleReset = (e) => {
         e.preventDefault();
-
-        let email = e.target.email.value;
-        email = emailRef.current.value;
-        console.log('Update Email:', email);
-        const password = e.target.password.value;
         
         setErrorMessage('');
         setSuccessMessage('');
         setSuccess(false);
-        // setVerificationMessage('');
-
-        if (!regex.test(password)) {
-            setErrorMessage('Password should be at least one upper case letter, one lower case letter and total length should be at least 6');
-            return;
-        }
-
-         
-          if(auth.currentUser.email==email){
-            updatePassword(auth.currentUser, password)
-            .then( ()=> {
-                setUser('');
-                navigate('/login');
-                setResetEmail(email);
-            })
-            .catch( ()=>{
-                setErrorMessage('Invalid Credential');
-                setResetEmail('');
-            })
-        }
-        else{
-             setErrorMessage('Invalid Credential');
-             setResetEmail('');
-         }
-        
-     
-
+        const email = e.target.email.value;
+        sendPasswordResetEmail(auth, email)
+        .then( ()=>{
+           // window.location.href = 'https://mail.google.com/mail/u/0/#inbox';
+            window.open('https://mail.google.com/mail/u/0/#inbox', '_blank');
+            setUser('');
+            navigate('/');
+        })
+        .catch( error => {
+            alert('Please register with a valid email');
+        })
 
     }
 
-    // useEffect( ()=>{
-    //     setLoginError('');
-
-    // },[handleLogIn] )
-
-
-
-
-
-    // const handleForgetPassword = () => {
-
-
-    //     const email = emailRef.current.value;
-    //     // console.log('Forget email:', email);
-    //     if (!email) {
-    //         setLoginError('Please provide a valid email address.')
-    //     }
-    //     else {
-    //         sendPasswordResetEmail(auth, email)
-    //             .then(() => {
-    //                 // Password reset email sent!
-    //                 // ..
-
-    //                 setLoginError('Password Reset email sent. Please check your email.')
-    //             })
-    //             .catch((error) => {
-    //                 const errorCode = error.code;
-    //                 const errorMessage = error.message;
-    //                 // ..
-    //             });
-    //     }
-
-    // }
-    return (
+ return (
         <div className="hero bg-[#036544] min-h-screen ">
 
             <div className="hero-content flex-col ">
@@ -134,21 +76,11 @@ const UpdatePassword = () => {
                             </label>
                             {/* <input type="email" {...(resetEmail ? { value: resetEmail } : {})} ref={emailRef} name='email' placeholder="email" className="input input-bordered" required /> */}
 
-                            <input type="email" defaultValue={resetEmail} ref={emailRef} name='email' placeholder="email" className="input input-bordered" required />
+                            <input type="email" Value={resetEmail}  name='email' placeholder="email" className="input input-bordered" required />
                        
                        
                         </div>
-                        <div className="form-control relative">
-                            <label className="label">
-                                <span className="label-text font-bold text-base">Password</span>
-                            </label>
-                            <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered" required />
-                            <button type='button' onClick={handlePasswordShow} className='absolute right-4 top-12'> {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}  </button>
-                            {/* <label  className="label">
-                                <Link to={'/'} className="label-text-alt link link-hover text-base">Forgot password?</Link>
-                           
-                            </label> */}
-                        </div>
+                         
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Reset</button>
                         </div>

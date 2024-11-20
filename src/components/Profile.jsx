@@ -1,14 +1,29 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { Navigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase.init';
 
 const Profile = () => {
     const { user, setUser,targetPath, setTargetPath } = useContext(AuthContext);
     
     const handleLogOut= ()=>{
-         setUser('');
-         setTargetPath('/');
+
+        signOut(auth).then(() => {
+
+             setUser('');
+          setTargetPath('/');
          <Navigate to={'/'}></Navigate>
+            // Sign-out successful.
+          }).catch((error) => {
+            // An error happened.
+          });
+
+        //   setUser('');
+        //   setTargetPath('/');
+        //  <Navigate to={'/'}></Navigate>
+          
+         
     }
     return (
         <div>

@@ -111,32 +111,16 @@ const Login = () => {
 
 
         const email = emailRef.current.value;
-        // console.log('Forget email:', email);
-        // if (!email) {
-        //     setLoginError('Please provide a valid email address.')
-        // }
-        // else {
-        //     sendPasswordResetEmail(auth, email)
-        //         .then(() => {
-        //             // Password reset email sent!
-        //             // ..
-
-        //             setLoginError('Password Reset email sent. Please check your email.')
-        //         })
-        //         .catch((error) => {
-        //             const errorCode = error.code;
-        //             const errorMessage = error.message;
-        //             // ..
-        //         });
-        // }
-        console.log("Hello Forget User email:", email);
-        if(email) setResetEmail(email);
+      
+        if(email){
+            setResetEmail(email);
+            navigate('/reset-password');
+        }
         else {
-            setLoginError('Please Provide Valid Email');
+            setLoginError('Please provide the registered email');
             return;
         }
-        navigate('/reset-password');
-
+  
     }
     return (
         <div className="hero bg-[#036544] min-h-screen ">

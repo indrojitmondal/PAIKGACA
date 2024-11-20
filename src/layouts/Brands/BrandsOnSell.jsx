@@ -16,11 +16,11 @@ const BransOnSell = () => {
     
     
     return (
-        <div className='mt-8 mx-5'>
-            <h2 className='text-xl text-center font-bold'>Brands on Sell</h2>
+        <div className='mt-20 mx-5'>
+            <h2 className='text-xl text-center font-bold'>BRANDS ON SELL</h2>
 
             <div className='my-8'>
-                <div className='grid lg:grid-cols-3 gap-5'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5'>
                   
                    
                   
