@@ -59,11 +59,12 @@ const UpdatePassword = () => {
         }
 
          
-           if(auth.currentUser.email==email){
+          if(auth.currentUser.email==email){
             updatePassword(auth.currentUser, password)
             .then( ()=> {
                 setUser('');
                 navigate('/login');
+                setResetEmail(email);
             })
             .catch( ()=>{
                 setErrorMessage('Invalid Credential');
@@ -71,9 +72,9 @@ const UpdatePassword = () => {
             })
         }
         else{
-            setErrorMessage('Invalid Credential');
-            setResetEmail('');
-        }
+             setErrorMessage('Invalid Credential');
+             setResetEmail('');
+         }
         
      
 

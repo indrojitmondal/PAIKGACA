@@ -32,10 +32,10 @@ const Login = () => {
     const handlePasswordShow = () => {
         setShowPassword(!showPassword);
     }
-    useEffect( ()=>{
+    // useEffect( ()=>{
 
-        setResetEmail('');
-    },[]);
+    //     setResetEmail('');
+    // },[]);
 
     const handleLogIn = (e) => {
         e.preventDefault();
@@ -61,6 +61,7 @@ const Login = () => {
                     e.target.reset();
                     setLoginError('');
                     setLoading(false);
+                    setResetEmail('');
                 
             })
             .catch(error => {
@@ -88,6 +89,7 @@ const Login = () => {
                   setUser(result.user);
 
                   setLoading(false);
+                  setResetEmail('');
 
              
 
