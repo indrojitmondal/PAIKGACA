@@ -131,8 +131,11 @@ const UpdatePassword = () => {
                             <label className="label">
                                 <span className="label-text font-bold text-base">Email</span>
                             </label>
-                            <input type="email" {...(resetEmail ? { value: resetEmail } : {})} ref={emailRef} name='email' placeholder="email" className="input input-bordered" required />
+                            {/* <input type="email" {...(resetEmail ? { value: resetEmail } : {})} ref={emailRef} name='email' placeholder="email" className="input input-bordered" required /> */}
 
+                            <input type="email" defaultValue={resetEmail} ref={emailRef} name='email' placeholder="email" className="input input-bordered" required />
+                       
+                       
                         </div>
                         <div className="form-control relative">
                             <label className="label">
