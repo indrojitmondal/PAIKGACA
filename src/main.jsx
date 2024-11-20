@@ -29,6 +29,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { ToastContainer } from "react-toastify";
+import UpdatePassword from './components/UpdatePassword';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
   {
     path:'/login',
     element: <Login></Login>
+  },
+  {
+    path:'/reset-password',
+    element: <UpdatePassword></UpdatePassword>
   },
   {
     path:'/register',

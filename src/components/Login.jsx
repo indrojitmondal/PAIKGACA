@@ -27,10 +27,15 @@ const Login = () => {
 
     const { user, setUser } = useContext(AuthContext);
     const {targetPath}= useContext(AuthContext);
+    const {resetEmail, setResetEmail}=useContext(AuthContext);
 
     const handlePasswordShow = () => {
         setShowPassword(!showPassword);
     }
+    useEffect( ()=>{
+
+        setResetEmail('');
+    },[]);
 
     const handleLogIn = (e) => {
         e.preventDefault();
@@ -105,27 +110,34 @@ const Login = () => {
 
         const email = emailRef.current.value;
         // console.log('Forget email:', email);
-        if (!email) {
-            setLoginError('Please provide a valid email address.')
-        }
-        else {
-            sendPasswordResetEmail(auth, email)
-                .then(() => {
-                    // Password reset email sent!
-                    // ..
+        // if (!email) {
+        //     setLoginError('Please provide a valid email address.')
+        // }
+        // else {
+        //     sendPasswordResetEmail(auth, email)
+        //         .then(() => {
+        //             // Password reset email sent!
+        //             // ..
 
-                    setLoginError('Password Reset email sent. Please check your email.')
-                })
-                .catch((error) => {
-                    const errorCode = error.code;
-                    const errorMessage = error.message;
-                    // ..
-                });
+        //             setLoginError('Password Reset email sent. Please check your email.')
+        //         })
+        //         .catch((error) => {
+        //             const errorCode = error.code;
+        //             const errorMessage = error.message;
+        //             // ..
+        //         });
+        // }
+        console.log("Hello Forget User email:", email);
+        if(email) setResetEmail(email);
+        else {
+            setLoginError('Please Provide Valid Email');
+            return;
         }
+        navigate('/reset-password');
 
     }
     return (
-        <div className="hero bg-[#036544] ">
+        <div className="hero bg-[#036544] h-screen ">
 
             <div className="hero-content flex-col ">
 
@@ -150,7 +162,9 @@ const Login = () => {
                             </label>
                             <input type={showPassword ? 'text' : 'password'} name='password' placeholder="password" className="input input-bordered" required />
                             <button type='button' onClick={handlePasswordShow} className='absolute right-4 top-12'> {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}  </button>
-                            <label onClick={handleForgetPassword} className="label">
+                            <label onClick={handleForgetPassword}   className="label">
+                                {/* <Link to={'/reset-password'} className="label-text-alt link link-hover text-base">Forgot password?</Link>
+                                */}
                                 <a href="#" className="label-text-alt link link-hover text-base">Forgot password?</a>
                             </label>
                         </div>
@@ -162,13 +176,7 @@ const Login = () => {
                         New to this website ? Please <Link to={'/register'}>Register</Link>
                     </p>
                     <div className='ml-4 mb-4 mr-4'>
-                        {/* <h2 className='font-bold ml-4'>Continue with</h2>
-                         
-                         <div className='flex justify-center'>
-                         <button onClick={handleGoogleSignIn}
-                            className='btn  btn-ghost text-green-500  '>Google</button>
-
-                         </div> */}
+                       
                          <GoogleLoginButton onClick={handleGoogleSignIn} className='text-sm' />
                         
                           
