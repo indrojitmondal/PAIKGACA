@@ -112,7 +112,7 @@ const Register = () => {
     //     setImageUrl('');
     // },[handleRegister]);
     return (
-        <div className="hero bg-[#036544] ">
+        <div className="hero bg-[#036544] min-h-screen ">
             <div className="hero-content flex-col ">
 
             <Link to={'/'}  className='mx-auto'>

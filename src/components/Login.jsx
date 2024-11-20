@@ -137,7 +137,7 @@ const Login = () => {
 
     }
     return (
-        <div className="hero bg-[#036544] h-screen ">
+        <div className="hero bg-[#036544] min-h-screen ">
 
             <div className="hero-content flex-col ">
 
@@ -148,13 +148,13 @@ const Login = () => {
                     <h1 className="text-2xl text-white font-bold">See more on Paikgaca</h1>
 
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100  w-full md:w-[400px] shrink-0 shadow-2xl">
                     <form onSubmit={handleLogIn} className="card-body ">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-bold text-base">Email</span>
                             </label>
-                            <input type="email" ref={emailRef} name='email' placeholder="email" className="input input-bordered" required />
+                            <input type="email" defaultValue={resetEmail} ref={emailRef} name='email' placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control relative">
                             <label className="label">

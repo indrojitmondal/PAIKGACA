@@ -47,30 +47,7 @@ const UpdatePassword = () => {
         email = emailRef.current.value;
         console.log('Update Email:', email);
         const password = e.target.password.value;
-        // console.log(password);
-        // signInUser(email, password)
-        //     .then(result => {
-        //         // console.log('Hello....', result.user);
-        //         // if (!result.user.emailVerified) {
-
-        //         //     setLoginError('Please verify your email address');
-
-
-        //             setUser(result.user);
-
-        //             // console.log(user);
-        //             // console.log('Hello..Target Path', targetPath)
-
-        //             navigate(targetPath);
-        //             e.target.reset();
-        //             setLoginError('');
-        //             setLoading(false);
-
-        //     })
-        //     .catch(error => {
-        //         // console.log('ERROR: ', error.message);
-        //         setLoginError(error.message)
-        //     })
+        
         setErrorMessage('');
         setSuccessMessage('');
         setSuccess(false);
@@ -82,15 +59,21 @@ const UpdatePassword = () => {
         }
 
          
-
+           if(auth.currentUser.email==email){
             updatePassword(auth.currentUser, password)
             .then( ()=> {
                 setUser('');
-                navigate('/');
+                navigate('/login');
             })
             .catch( ()=>{
-                setErrorMessage('Invalid Email or Password!')
+                setErrorMessage('Invalid Credential');
+                setResetEmail('');
             })
+        }
+        else{
+            setErrorMessage('Invalid Credential');
+            setResetEmail('');
+        }
         
      
 
@@ -131,7 +114,7 @@ const UpdatePassword = () => {
 
     // }
     return (
-        <div className="hero bg-[#036544] h-screen ">
+        <div className="hero bg-[#036544] min-h-screen ">
 
             <div className="hero-content flex-col ">
 
@@ -142,7 +125,7 @@ const UpdatePassword = () => {
                     <h1 className="text-2xl text-white font-bold">Reset Password Now</h1>
 
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100  w-full md:w-[400px] shrink-0 shadow-2xl">
                     <form onSubmit={handleReset} className="card-body ">
                         <div className="form-control">
                             <label className="label">
