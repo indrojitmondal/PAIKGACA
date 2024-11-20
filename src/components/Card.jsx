@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ brand }) => {
     // console.log('Hello', brand);
-    const { brand_logo, brand_name, rating, description, isSaleOn } = brand;
+    const {_id, brand_logo, brand_name, rating, description, isSaleOn } = brand;
+    console.log("Desired ID", _id);
     return (
         <div className='lg:w-10/12 border border-green-500 grid grid-cols-2 rounded-md  p-4  gap-4 lg:justify-between  items-center  mx-auto my-8'>
             <div className="left ">
@@ -43,7 +44,7 @@ const Card = ({ brand }) => {
                         <Wave  text="sale is on"  />
                     }
                     </div>
-                    <Link  className='btn mt-3'>View Coupons</Link>
+                    <Link to={`/brand/${_id}`}  className='btn mt-3'>View Coupons</Link>
 
                     
                 
