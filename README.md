@@ -15,7 +15,7 @@ Paikgaca is online coupon collection application.Using this application users ca
 <a href='https://paikgacha-336df.web.app/' target='_blank'>Visit Site </a>
 
 ## Key Features
-Here are the top 3 key features of PAIKGACA:
+Here are the top 4 key features of PAIKGACA:
 1. **Authentication**:
    - To view coupon codes, users have must to login, Otherwise they will not see the main features.We included here forget password system so that user can login further if they forget password.
 2. **Brands**:
