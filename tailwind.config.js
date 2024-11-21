@@ -9,6 +9,7 @@ export default {
       colors: {
          b1: '#036544',
          primary: '#036544',
+         footer: '#2B3440'
       },
       backgroundImage: {
         profileBg: "url('/bg.jpg')",
