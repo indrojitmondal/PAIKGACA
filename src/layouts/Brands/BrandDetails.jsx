@@ -56,20 +56,20 @@ const BrandDetails = () => {
             <div className='my-5 mx-5 grid lg:grid-cols-3 gap-5'>
 
                 {
-                    coupons.map(coupon => <CouponCard key={coupon.coupon_code} coupon={coupon} ></CouponCard>)
+                    coupons.map(coupon => <CouponCard key={coupon.coupon_code} shop_link={shop_link} coupon={coupon} ></CouponCard>)
                 }
                
 
             </div>
-            <div className='mb-4 flex justify-center'>
+            {/* <div className='mb-4 flex justify-center'>
                  <Link target='_blank' to={shop_link} className='btn bg-green-500 '>use Now</Link>
-               </div>
+               </div> */}
 
            
 
 
 
-        </div>
+           </div>
     );
 };
 
