@@ -6,7 +6,7 @@ const Services = () => {
     return (
         <div className='mt-5'>
 
-            <h2 className='text-xl text-center font-bold animate__animated animate__flash animate__infinite	infinite'>OUR SERVICES</h2>
+            <h2 className='text-xl text-center font-bold  '>OUR SERVICES</h2>
             
 
             <div className='w-8/12 mx-auto'>

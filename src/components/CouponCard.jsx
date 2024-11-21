@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const CouponCard = ({ coupon }) => {
-  const { coupon_code, description, expiry_date, condition, coupon_type } = coupon;
+  const { coupon_code, description, expiry_date,  condition, coupon_type, shop_link } = coupon;
   const [copied, setCopied] = useState(false);
  
 
@@ -33,6 +34,9 @@ const CouponCard = ({ coupon }) => {
       <h2>Expire Date: {expiry_date}</h2>
       <h2>Condition: {condition}</h2>
       <h2>Coupon Type: {coupon_type}</h2>
+      <div className='mb-4 flex justify-center'>
+                 <Link target='_blank' to={shop_link} className='btn'>use Now</Link>
+            </div>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Profile = () => {
             </div>
             {/* <h2 className='block md:hidden'>{user.email}</h2> */}
             <div className='block md:hidden space-y-1 mt-2 md:space-y-3'>
-                    <h4 className='text-center text-sm animate__animated animate__bounce'>Hello, {user.displayName}</h4>
+                    <h4 className='text-center text-sm animate__animated animate__heartBeat'>Hello, {user.displayName}</h4>
                     <h2 className='text-base'>{user.email}</h2>
                 </div>
         </div>
