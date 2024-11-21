@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SellCard = ({brand}) => {
     const {_id, brand_logo, brand_name,coupons,isSaleOn,category}= brand;
     // console.log("hello..coupons",coupons);
-    console.log(_id);
+    // console.log(_id);
     return (
         <div>
             {/* <Link to={'/brand/_id}'}> */}

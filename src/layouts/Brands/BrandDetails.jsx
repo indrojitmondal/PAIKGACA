@@ -58,8 +58,12 @@ const BrandDetails = () => {
                 {
                     coupons.map(coupon => <CouponCard key={coupon.coupon_code} coupon={coupon} ></CouponCard>)
                 }
+               
 
             </div>
+            <div className='mb-4 flex justify-center'>
+                 <Link target='_blank' to={shop_link} className='btn bg-green-500 '>use Now</Link>
+               </div>
 
            
 
