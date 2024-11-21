@@ -34,7 +34,7 @@ const Navbar = () => {
                 ""
          }
 
-        <NavLink to={'/about'} className='flex items-center gap-1' ><TbArrowRoundaboutRight />About Dev</NavLink>
+        <NavLink to={'/about-dev'} className='flex items-center gap-1' ><TbArrowRoundaboutRight />About Dev</NavLink>
 
     </div>
     return (
@@ -59,7 +59,7 @@ const Navbar = () => {
                         
                     </div>
                     {/* <a className="btn btn-ghost text-xl">daisyUI</a> */}
-                    <img className=" w-32 h-24 md:w-40 md:h-40 " src={logo} alt="logo" />
+                    <img className=" w-32 h-24 md:w-40 md:h-40 py-5 rounded-md" src={logo} alt="logo" />
                 </div>
                 <div className="navbar-center hidden  lg:flex lg:flex-col">
 

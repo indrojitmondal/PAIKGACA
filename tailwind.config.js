@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
          b1: '#036544',
+         primary: '#036544',
       },
       backgroundImage: {
         profileBg: "url('/bg.jpg')",

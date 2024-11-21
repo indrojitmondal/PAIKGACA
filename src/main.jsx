@@ -31,6 +31,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { ToastContainer } from "react-toastify";
 import UpdatePassword from './components/UpdatePassword';
+import AboutDev from './components/AboutDev';
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: '/brands',
         element :  <Brands></Brands> 
+      },
+      {
+        path: '/about-dev',
+        element : <AboutDev></AboutDev>
       },
       {
         path: '/brand/:id',
