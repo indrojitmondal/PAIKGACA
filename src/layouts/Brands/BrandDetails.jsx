@@ -61,9 +61,7 @@ const BrandDetails = () => {
 
             </div>
 
-            <div className='mb-4 flex justify-center'>
-                 <Link target='_blank' to={shop_link} className='btn'>use Now</Link>
-            </div>
+           
 
 
 

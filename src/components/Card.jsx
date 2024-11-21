@@ -44,7 +44,7 @@ const Card = ({ brand }) => {
                         <Wave  text="sale is on"  />
                     }
                     </div>
-                    <Link to={`/brand/${_id}`}  className='btn mt-3'>View Coupons</Link>
+                    <Link to={`/brand/${_id}`}  className='btn mt-3 text-green-500 font-bold'>View Coupons</Link>
 
                     
                 
