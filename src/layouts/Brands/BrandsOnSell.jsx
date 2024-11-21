@@ -26,7 +26,7 @@ const BransOnSell = () => {
                   
                    {
                      brands.filter( brand => brand.isSaleOn == true)
-                     .map( brand => <SellCard key={brand._id} brand={brand} ></SellCard> )
+                     .map( brand => <Link to={`/brand/${brand._id}`}> <SellCard key={brand._id} brand={brand} ></SellCard> </Link>)
                    
                      
                    }

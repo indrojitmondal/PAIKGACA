@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SellCard = ({brand}) => {
-    const { brand_logo, brand_name,coupons,isSaleOn,category}= brand;
+    const {_id, brand_logo, brand_name,coupons,isSaleOn,category}= brand;
     // console.log("hello..coupons",coupons);
+    console.log(_id);
     return (
         <div>
+            {/* <Link to={'/brand/_id}'}> */}
             <div className="card bg-base-100 w-96 shadow-xl">
                 <figure>
                     <img className='w-40 h-40'
@@ -24,6 +27,7 @@ const SellCard = ({brand}) => {
                     </div> */}
                 </div>
             </div>
+            {/* </Link> */}
         </div>
     );
 };
