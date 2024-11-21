@@ -16,12 +16,12 @@ const AboutDev = () => {
                     />
 
                     <div className="w-full text-center">
-                        <h1 className="text-2xl pt-4">
+                        <h1 className="text-2xl text-primary pt-4">
                             <span>Indrojit</span> <span>Mondal</span>
                         </h1>
-                        <span className="text-primary">indro.cse.bu</span>
+                        <span className="">indro.cse.bu</span>
                         @
-                        <span className="text-primary">gmail.com</span>
+                        <span className="">gmail.com</span>
                         <p className="pb-2 text-lg">Programmer | MERN Stack Developer</p>
 
                         <div className="flex gap-3 justify-center pb-2">
