@@ -3,57 +3,54 @@
  ![PAIKGACA Screenshot](https://github.com/programming-hero-web-course1/b10-a9-authentication-indrojitmondal/blob/main/src/assets/screenshot/1.png)
 
 ## Table of Contents
-- [Brief Description](#brief-description)
-- [Top 3 Features](#top-3-features)
-- [Technologies Used](#technologies-used)
-- [Livelink](#livelink)
+- [Purpose](#purpose)
+- [Live URL](#live-url)
+- [Key Features](#key-features)
+- [NPM Packages used in this project](#npm-packages-used-in-the-project)
 
-## Brief Description
-Dream 11 Cricket Team Maker is a web application for creating a team for premium tournament as for example, IPL, BPL etc. This website demo will be very helpful to make a cricket team. The top key features are 'CREDIT ADDING', 'AVAILABLE, 'SELECT', 'DELETE' and 'SUBSCRIBE' functionalities that might be very helpful for a team manager. A player card includes player name, image, playing role, bidding price and Choose Player Button. If card's don't have enough money, the player will not be selected. This demo projects exits only 15 fake data and player selection range is 1 to 6. If it crosses , no player will be selected and give an alert. If user delete a player from selected card, they can add again from the available card but remember that no multiple data will not be selected. If someone try to select or clicked twice , it will give an alert. After all, I hope that this website demo will be very helpful for creating a team by a team manager or leader or author. 
+## Purpose
+Paikgaca is online coupon collection application.Using this application users can view few advertisement of various e-commerce applications. By the help of our application customers can see coupons and purchase their desired products.  
 
-## Top 3 Features
-Here are the top 3 key features of Dream11 Cricket Team:
-1. **Claim Free Credit**:
-   - Users will get some free credit after clicking on the button.
-2. **Available and Selected Section**:
-   - This project includes in this two section. Available shows available    players and selected category shows selected player and also show Add More Players button. 
-3. **Subscribe to Newsletter**: 
-   - Users can subscribe by email and get updated news on feature updates. 
+## Live URL
+<a href='https://paikgacha-336df.web.app/' target='_blank'>Visit Site </a>
 
-## Technologies Used
-Here are 5 technologies I have used in this project:
-1. **HTML**:
-   - I have used HTML5 tags like &lt;main&gt;, &lt;footer&gt; etc.
-2. **TailwindCSS**:
-   - I have used the utility first css framework TailwindCSS in this project.
-3. **DaisyUI**:
-   - I have used some themes by it in player choice button and footer. 
-4. **ReactJS**:
-   - I have developed this project using React JSX by Vite tools. 
-5. **Surge**:
-   - I have deployed this project on surge.
+## Key Features
+Here are the top 3 key features of PAIKGACA:
+1. **Authentication**:
+   - To view coupon codes, users have must to login, Otherwise they will not see the main features.We included here forget password system so that user can login further if they forget password.
+2. **Brands**:
+   - We include two categories brands thats are top brands and brands on sell. In the home page user can see brand details to clicking on the logo and In brands page we includes a search bar for searching brands. 
+3. **Service Process and Contact Section**: 
+   - We described our services process in Our Services section and included a contact form so that users can send their messages to us.
+4. **My-Profile**
+   - After successfully login user can their profile and update.
+
+## NPM Packages used in this project
+Here are few npm packages I have used in this project:
+1. **React-Rating-Starts-Component**
+2. **React-Helmet-Async**
+3. **React Fast Marquee**
+4. **Reactjs-Social-Login**
+5. **React-Toastify**
+6. **React-Animated-css**
+6. **React-Wavify**
+6. **React-Copy-to-Clipboard**
 
 ## Screenshots
 Here are some screenshots of the Dream 11 Cricket Team:
 
 1. **Homepage**:
-   ![Homepage Screenshot](https://github.com/programming-hero-web-course1/b10a7-dream-11-indrojitmondal/blob/main/src/assets/Screenshot.png)
-   *The homepage displays a logo and a navbar*
+   ![Homepage Screenshot](https://github.com/programming-hero-web-course1/b10-a9-authentication-indrojitmondal/blob/main/src/assets/screenshot/1.png)
+   *The homepage displays a logo, navbar, banner, top brans, brands on sell, services process and contact section*
 
-3. **Available Section**:
-   ![Available Section Screenshot](https://github.com/programming-hero-web-course1/b10a7-dream-11-indrojitmondal/blob/main/src/assets/available.png)
-   *This section shows player image, name, country, playing role and bidding price.*
+2. **Brands Page**:
+   ![Brand Section Screenshot](https://github.com/programming-hero-web-course1/b10-a9-authentication-indrojitmondal/blob/main/src/assets/screenshot/2.png)
+   *This section shows a search bar, brand name, brand logo, rating, selling status and a view coupon button.*
 
-2. **Selected Section**:
-   ![Selected Section Screenshot](https://github.com/programming-hero-web-course1/b10a7-dream-11-indrojitmondal/blob/main/src/assets/selected.png)
-   *This section shows selected player image, name, playing role and bidding price and a remove button .*
+3. **MY Profile Section**:
+   ![My Profile Screenshot](https://github.com/programming-hero-web-course1/b10-a9-authentication-indrojitmondal/blob/main/src/assets/screenshot/3.png)
+   *My Profile shows a welcome message, name, photo and update button.*
 
-3. **Newsletter and Footer**:
-   ![Newsletter and Footer Screenshot](https://github.com/programming-hero-web-course1/b10a7-dream-11-indrojitmondal/blob/main/src/assets/newsletterandfooter.png)
-   *Newsletter shows subscribe input filed that takes email and the footer includes quick links and subscribe section.*
-
-## Livelink
-   <a href='https://dream11-cricketteammaker.surge.sh/' target="_blank">https://dream11-cricketteammaker.surge.sh/ </a>
 
 
 
