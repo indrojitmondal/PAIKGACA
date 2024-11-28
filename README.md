@@ -37,7 +37,7 @@ Here are few npm packages I have used in this project:
 6. **React-Copy-to-Clipboard**
 
 ## Screenshots
-Here are some screenshots of the Dream 11 Cricket Team:
+Here are some screenshots of the PAIKGACA:
 
 1. **Homepage**:
    ![Homepage Screenshot](https://github.com/programming-hero-web-course1/b10-a9-authentication-indrojitmondal/blob/main/src/assets/screenshot/1.png)
